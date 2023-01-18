@@ -172,7 +172,7 @@ const deleteUserById = asyncHandler(async (req, res) => {
    }
   
    const token = jwt.sign(payload, secret, {expiresIn:'15m'} );
-   const link = `http://localhost:5000/api/users/reset-password/${user.id}/${token}`;
+   const link = `https://fragile-fly-school-uniform.cyclic.app/api/users/reset-password/${user.id}/${token}`;
 //    console.log(link);
 const mailOptions = {
     from:"phuyasuo12@gmail.com",
