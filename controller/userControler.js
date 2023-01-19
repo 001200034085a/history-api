@@ -240,5 +240,4 @@ const deleteUserById = asyncHandler(async (req, res) => {
 //   }
 
 module.exports = {
-    registerUser, loginUser, getUserProfile, getAllUser, updateUserProfile, deleteUserById, getUserById, putUserById, ForgotPassword, ResetPassword, GetResetPassword
-}
+    registerUser, loginUser, getUserProfile, getAllUser, updateUserProfile, deleteUserById, getUserById, putUserById
