@@ -3,7 +3,7 @@ var router = express.Router();
 const User = require("../models/userModel");
 
 const { 
-  registerUser, loginUser , getUserProfile, getAllUser, updateUserProfile, deleteUserById, getUserById, putUserById, ForgotPassword, ResetPassword, GetResetPassword
+  registerUser, loginUser , getUserProfile, getAllUser, updateUserProfile, deleteUserById, getUserById, putUserById
 } = require("../controller/userControler");
 const { protect, isAdmin } = require('../midleware/authMidleware');
 
@@ -53,14 +53,14 @@ router.get("/:id", protect, isAdmin, getUserById);
 // @access: Private/admin
 router.put("/:id",putUserById);
 
-// 9.
-router.post("/forgot-password", ForgotPassword);
+// // 9.
+// router.post("/forgot-password", ForgotPassword);
 
-// 10.
-router.post("/reset-password/:id/:token",ResetPassword);
+// // 10.
+// router.post("/reset-password/:id/:token",ResetPassword);
 
-// 11.
-router.get("/reset-password/:id/:token", GetResetPassword )
+// // 11.
+// router.get("/reset-password/:id/:token", GetResetPassword )
 
 
 module.exports = router;
